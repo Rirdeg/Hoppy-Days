@@ -9,10 +9,11 @@ extents = Vector2( 320, 320 )
 [node name="Level1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 444.269, 111.067 )
+position = Vector2( 442.321, 216.26 )
 
 [node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2( 460.136, 614.043 )
+editor/display_folded = true
+position = Vector2( 458.188, 719.236 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -25,3 +26,37 @@ texture = ExtResource( 2 )
 visible = false
 shape = SubResource( 1 )
 
+[node name="Floor2" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 1097.14, 814.689 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floor2"]
+scale = Vector2( 10, 10 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Floor3" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( -171.022, 580.927 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floor3"]
+scale = Vector2( 10, 10 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 485.057, 298.047 )
+current = true
+zoom = Vector2( 2, 2 )
