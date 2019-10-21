@@ -1,62 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 320, 320 )
+[ext_resource path="res://Scenes/Levels/Tileset.tres" type="TileSet" id=2]
 
 [node name="Level1" type="Node2D"]
+position = Vector2( -73.563, 402.145 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 442.321, 216.26 )
+collision_mask = 2
 
-[node name="Floor" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 458.188, 719.236 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( -458648, 3, 0, -458645, 2, 0, -327582, 3, 0, -65530, 1, 0, 91, 3, 0, 131114, 3, 0, 196666, 3, 0, 262231, 3, 0, 327683, 2, 0, 327689, 2, 0, 327695, 2, 0, 327706, 3, 0, 327709, 2, 0, 327715, 2, 0, 327727, 3, 0, 327730, 3, 0, 589906, 2, 0, 720962, 3, 0, 720969, 2, 0, 1048621, 1, 0, 1114160, 0, 0, 1114165, 0, 0, 1114171, 0, 0 )
 
-[node name="Sprite" type="Sprite" parent="Floor"]
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-visible = false
-shape = SubResource( 1 )
-
-[node name="Floor2" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 1097.14, 814.689 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2"]
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
-visible = false
-shape = SubResource( 1 )
-
-[node name="Floor3" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( -171.022, 580.927 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor3"]
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
-visible = false
-shape = SubResource( 1 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 485.057, 298.047 )
-current = true
-zoom = Vector2( 2, 2 )
