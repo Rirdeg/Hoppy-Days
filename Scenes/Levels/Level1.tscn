@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Levels/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Items/Coin.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Items/JumpPad.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/SFX/Summer_Park.ogg" type="AudioStream" id=9]
 [ext_resource path="res://Scenes/GUI/GUI.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Items/Portal.tscn" type="PackedScene" id=11]
 
 [node name="Level1" type="Node2D"]
 position = Vector2( -73.563, 402.145 )
@@ -117,9 +118,6 @@ position = Vector2( 9736.88, 1679.58 )
 [node name="Coin33" parent="Coins" instance=ExtResource( 2 )]
 position = Vector2( 9637.04, 1673.71 )
 
-[node name="Coin34" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 11689.5, 1324.29 )
-
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 442.321, 216.26 )
 
@@ -144,7 +142,7 @@ position = Vector2( 5824.43, 902.892 )
 position = Vector2( 9228.85, 1924.67 )
 
 [node name="Cloud" parent="NPCS" instance=ExtResource( 6 )]
-position = Vector2( 3123.13, 205.158 )
+position = Vector2( 3133.92, -56.0179 )
 
 [node name="Cloud2" parent="NPCS" instance=ExtResource( 6 )]
 position = Vector2( 6826.85, -470.315 )
@@ -202,4 +200,7 @@ volume_db = -3.0
 autoplay = true
 
 [node name="GUI" parent="." instance=ExtResource( 10 )]
+
+[node name="Portal" parent="." instance=ExtResource( 11 )]
+position = Vector2( 11646.8, 948.847 )
 
